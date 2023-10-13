@@ -2,10 +2,14 @@ def line(katz_deli):
     if not katz_deli:
         print("The line is currently empty.")
     else:
-        line_str = "The line is currently:"
-        for i, person in enumerate(katz_deli, start = 1):
-            line_str += f"{i}.{person}"
+        line_str = "The line is currently: "
+        for i, person in enumerate(katz_deli, start=1):
+            line_str += f"{i}. {person}"
+            if i < len(katz_deli):
+                line_str += " "
         print(line_str)
+
+
 
 def take_a_number(katz_deli, name):
     katz_deli.append(name)
